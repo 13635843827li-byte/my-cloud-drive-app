@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: my-cloud-drive-app
+    env: docker
+    region: ohio
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 5244
+      - key: DB_TYPE
+        value: postgres
+      - key: DB_HOST
+        value: ep-red-cake-b5l1sxz6-pooler.c-7.us-east-2.aws.neon.tech
+      - key: DB_PORT
+        value: 5432
+      - key: DB_USER
+        value: neondb_owner
+      - key: DB_PASS
+        value: npg_TSEu8dBvsMz9
+      - key: DB_NAME
+        value: neondb
+      - key: DB_TABLE_PREFIX
+        value: xlist_
+      - key: DB_SSL_MODE
+        value: require
+      - key: CDN
+        value: https://cdn.jsdelivr.net/npm/alist-web@$version/dist
